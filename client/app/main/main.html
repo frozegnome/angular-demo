@@ -24,29 +24,11 @@
       </tbody>
     </table>
     <div>
-      <button class="btn btn-success" ng-click="">Add</button>
-      <button class="btn btn-warning" ng-click="">Edit</button>
+      <button class="btn btn-success" ui-sref="main.add">Add</button>
+      <button class="btn btn-warning" ui-sref="main.edit">Edit</button>
       <button class="btn btn-danger" ng-click="">Delete</button>
     </div>
     <br>
-    <form action="submit" ng-submit="">
-      <div class="col-xs-6">
-        <label>First Name</label>
-        <input type="text" size="30" require>
-        <label>Last Name</label>
-        <input type="text" size="30" require>
-        <label>Middle Name</label>
-        <input type="text" size="30">
-      </div>
-      <div class="col-xs-6">
-        <label>Age</label>
-        <input type="text" size="30" require>
-        <label>Designation</label>
-        <input type="text" size="30">
-        <label>Salary</label>
-        <input type="text" size="30">
-      </div>
-      <button class="btn btn-primary">Submit</button>
-    </form>
+    <div ui-view></div>
   </main>
 </div>

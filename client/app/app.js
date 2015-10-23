@@ -8,33 +8,29 @@ angular.module('angularDemoApp', [
   'btford.socket-io',
   'ui.router'
 ])
-  .config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
+  .config(function ($urlRouterProvider, $stateProvider) {
 
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('main', {
-        url: '/main',
-        templateUrl: 'main/main.html',
+        url: '/',
+        templateUrl: 'app/main/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .state('main.add', {
         url: '/add',
-        templateUrl: 'add/add.html',
+        templateUrl: 'app/add/add.html',
         controller: 'AddCtrl',
         controllerAs: 'add'
       })
       .state('main.edit', {
         url: '/edit',
-        templateUrl: 'edit/edit.html',
+        templateUrl: 'app/edit/edit.html',
         controller: 'EditCtrl',
         controllerAs: 'edit'
       });
 
-    $locationProvider.html5Mode(true);
-  })
-  .run(($rootScope) => {
-    $rootScope.$on('$stateChangeError', console.log.bind(console));
   });
 
