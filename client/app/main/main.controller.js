@@ -26,7 +26,7 @@
 
       // Instantiate loadEmployees()
       function activate() {
-        loadEmployees();
+        loadEmployees()
       }
     }]);
 })();

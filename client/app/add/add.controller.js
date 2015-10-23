@@ -7,6 +7,16 @@
       var vm = this;
       
       //Loading vm methods
-      
+      vm.emp = {};
+
+      vm.postNewEmp = function() {
+      	employeeInfo.setEmployees(vm.emp)
+      	.success(function() {
+          console.log('Success!');
+        })
+        .error(function() {
+          console.log('Error fetching data');
+        });
+      };
     }]);
 })();
