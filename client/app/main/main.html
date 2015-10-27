@@ -12,6 +12,7 @@
           <th>Age</th>
           <th>Designation</th>
           <th>Salary</th>
+          <th>Select</th>
         </tr>
         <tr ng-repeat="employee in main.empList">
           <td>{{ employee.firstName }}</td>
@@ -20,13 +21,15 @@
           <td>{{ employee.age }}</td>
           <td>{{ employee.designation }}</td>
           <td>{{ employee.salary }}</td>
+          <td><input type="radio" name="row-selection" ng-value="{{ employee }}" ng-model="main.tempEmp"></td>
         </tr>
+        {{ main.tempEmp }}
       </tbody>
     </table>
     <div>
       <button class="btn btn-success" ui-sref="main.add">Add</button>
       <button class="btn btn-warning" ui-sref="main.edit">Edit</button>
-      <button class="btn btn-danger" ng-click="">Delete</button>
+      <button class="btn btn-danger" ui-sref="main.delete">Delete</button>
     </div>
     <br>
     <div ui-view></div>

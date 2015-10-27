@@ -1,0 +1,20 @@
+<form action="submit" ng-submit="main.postChangeEmp()">
+  <h2>Edit an Employee</h2>
+  <div class="col-xs-6">
+    <label>First Name</label>
+    <input type="text" size="30" ng-model="main.tempEmp.firstName" require>
+    <label>Last Name</label>
+    <input type="text" size="30" ng-model="main.tempEmp.lastName" require>
+    <label>Middle Name</label>
+    <input type="text" size="30" ng-model="main.tempEmp.middleName">
+  </div>
+  <div class="col-xs-6">
+    <label>Age</label>
+    <input type="text" size="30" ng-model="main.tempEmp.age" require>
+    <label>Designation</label>
+    <input type="text" size="30" ng-model="main.tempEmp.designation">
+    <label>Salary</label>
+    <input type="text" size="30" ng-model="main.tempEmp.salary">
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>

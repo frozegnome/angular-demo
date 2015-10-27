@@ -21,15 +21,21 @@ angular.module('angularDemoApp', [
       })
       .state('main.add', {
         url: '/add',
-        templateUrl: 'app/add/add.html',
-        controller: 'AddCtrl',
-        controllerAs: 'add'
+        templateUrl: 'app/main/add.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .state('main.edit', {
         url: '/edit',
-        templateUrl: 'app/edit/edit.html',
-        controller: 'EditCtrl',
-        controllerAs: 'edit'
+        templateUrl: 'app/main/edit.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .state('main.delete', {
+        url: '/delete',
+        templateUrl: 'app/main/delete.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       });
 
   });

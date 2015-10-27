@@ -18,6 +18,14 @@ main {
     width: 100%;
 }
 
+th:last-child {
+    text-align: center;
+}
+
+td:last-child {
+    text-align: center;
+}
+
 form {
 
     input {

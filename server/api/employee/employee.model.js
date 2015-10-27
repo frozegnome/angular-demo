@@ -9,7 +9,8 @@ var EmployeeSchema = new Schema({
   middleName: String,
   age: Number,
   designation: String,
-  salary: Number
+  salary: Number,
+  isSelected: Boolean
 });
 
 module.exports = mongoose.model('Employee', EmployeeSchema);
